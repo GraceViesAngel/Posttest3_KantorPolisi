@@ -14,7 +14,7 @@ Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan 
 
 
 ### (MASUK PROGRAM)
-Secara tampilan dan fungsi, output program pada Post Test 2 sama seperti Post Test 1, saat dijalankan aplikasi menampilkan menu utama (Informasi Polisi, Jadwal Patroli, Kasus Penyelidikan), tiap menu membuka sub-menu CRUD, dan data dicetak dalam tabel konsol rapi (mis. NRP | Nama | Pangkat | Status), sehingga perilaku hasil di layar tidak berubah; perbedaannya ada pada arsitektur dan kualitas internal kode dipisah per package dan program lebih terstruktur .
+Secara tampilan dan fungsi, output program pada Post Test 2 sama seperti Post Test 1, saat dijalankan aplikasi menampilkan menu utama (Informasi Kantor Polisi, Jadwal Patroli, Kasus Penyelidikan), tiap menu membuka sub-menu CRUD, dan data dicetak dalam tabel konsol rapi (mis. NRP | Nama | Pangkat | Status), sehingga perilaku hasil di layar tidak berubah; perbedaannya ada pada arsitektur dan kualitas internal kode dipisah per package dan program lebih terstruktur .
 
 
 <img width="625" height="294" alt="image" src="https://github.com/user-attachments/assets/8c21684b-c84a-4bb8-a48f-a5ef8918f189" />
@@ -23,7 +23,7 @@ Secara tampilan dan fungsi, output program pada Post Test 2 sama seperti Post Te
 
 => PENJELASAN
 
-Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampilkan **Menu Utama** berisi tiga yaitu: **Informasi Polisi**, **Jadwal Patroli**, dan **Kasus Penyelidikan**. saya memilih menu, kemudian di sub-menu menjalankan **CRUD** (tambah, lihat tabel, ubah, hapus) serta fitur **cari/filter** sesuai modul; setiap input dicek validasinya (NRP 3 digit unik, status hanya nilai yang diizinkan, dan NRP harus terdaftar saat membuat jadwal/kasus). Setelah sebuah aksi selesai, aplikasi kembali ke sub-menu; jika memilih **Kembali**, pengguna balik ke Menu Utama. Seluruh data selalu ditampilkan dalam **tabel yang rapi** dengan judul di tengah. Bila saya memilih **Keluar**, program menutup dengan aman.
+Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampilkan **Menu Utama** berisi tiga yaitu: **Informasi Kantor Polisi**, **Jadwal Patroli**, dan **Kasus Penyelidikan**. saya memilih menu, kemudian di sub-menu menjalankan **CRUD** (tambah, lihat tabel, ubah, hapus) serta fitur **cari/filter** sesuai modul; setiap input dicek validasinya (NRP 3 digit unik, status hanya nilai yang diizinkan, dan NRP harus terdaftar saat membuat jadwal/kasus). Setelah sebuah aksi selesai, aplikasi kembali ke sub-menu; jika memilih **Kembali**, pengguna balik ke Menu Utama. Seluruh data selalu ditampilkan dalam **tabel yang rapi** dengan judul di tengah. Bila saya memilih **Keluar**, program menutup dengan aman.
 
 
 
@@ -36,7 +36,7 @@ Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampi
 
 => PENJELASAN
 
-Selanjutnya pada tampilan ini saya berada di Menu Utama lalu memilih 1. Informasi kantor Polisi, sehingga program membuka sub-menu Fitur Informasi Polisi; selanjutnya saya memilih 1. Tambah data polisi dan program meminta input berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya *Aktif/Cuti*). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: aktif; karena semua valid, data disimpan ke daftar personel dan muncul pesan "Berhasil ditambahkan." Setelah itu program kembali ke sub-menu Fitur Informasi Polisi agar saya bisa melanjutkan inputan lainnya (misalnya Lihat Data untuk melihat Yolla Karin sudah masuk di tabel, Ubah/Hapus, atau Kembali ke Menu Utama).
+Selanjutnya pada tampilan ini saya berada di Menu Utama lalu memilih 1. Informasi kantor Polisi, sehingga program membuka sub-menu Fitur Informasi kantor Polisi; selanjutnya saya memilih 1. Tambah data polisi dan program meminta input berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya *Aktif/Cuti*). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: aktif; karena semua valid, data disimpan ke daftar personel dan muncul pesan "Berhasil ditambahkan." Setelah itu program kembali ke sub-menu Fitur Informasi Polisi agar saya bisa melanjutkan inputan lainnya (misalnya Lihat Data untuk melihat Yolla Karin sudah masuk di tabel, Ubah/Hapus, atau Kembali ke Menu Utama).
 
 
 
