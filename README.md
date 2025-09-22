@@ -36,7 +36,7 @@ Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampi
 
 => PENJELASAN
 
-Selanjutnya pada tampilan ini saya berada di Menu Utama lalu memilih 1. Informasi kantor Polisi, sehingga program membuka sub-menu Fitur Informasi kantor Polisi; selanjutnya saya memilih 1. Tambah data polisi dan program meminta input berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya *Aktif/Cuti*). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: aktif; karena semua valid, data disimpan ke daftar personel dan muncul pesan "Berhasil ditambahkan." Setelah itu program kembali ke sub-menu Fitur Informasi Polisi agar saya bisa melanjutkan inputan lainnya (misalnya Lihat Data untuk melihat Yolla Karin sudah masuk di tabel, Ubah/Hapus, atau Kembali ke Menu Utama).
+Di layar ini saya masuk ke Informasi Kantor Polisi, memilih 1. POLISI, lalu terbuka submenu Fitur Informasi Polisi. Saya pilih 1. Tambah data polisi sehingga aplikasi meminta isian berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya Aktif/Cuti). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: Aktif. Karena semua valid, data disimpan dan muncul pesan “Berhasil ditambahkan.” Setelah itu program kembali ke submenu Fitur Informasi Polisi supaya saya bisa lanjut aksi lain misalnya Lihat Data untuk memastikan Yolla Karin sudah tercatat, Ubah/Hapus, atau Kembali ke menu sebelumnya.
 
 
 
