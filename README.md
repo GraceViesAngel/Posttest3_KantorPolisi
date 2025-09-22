@@ -260,7 +260,9 @@ Pada bagian ini saya berada di menu Jadwal Patroli dan memilih opsi 5 (Hapus Jad
 
 ### JADWAL PATROLI (6. Kembali)
 
-<img width="525" height="562" alt="image" src="https://github.com/user-attachments/assets/9adecfdd-c9a7-4672-925d-73f5493c9736" />
+
+<img width="633" height="489" alt="image" src="https://github.com/user-attachments/assets/a8c6d91e-4ef0-4ef5-8370-25641c994efd" />
+
 
 
 => PENJELASAN
@@ -329,7 +331,9 @@ Di bagian ini saya berada di menu Kasus Penyelidikan dan memilih opsi 4 (Hapus K
 
 ###  KASUS PENYELIDIKAN (5. Kembali)
 
-<img width="483" height="446" alt="image" src="https://github.com/user-attachments/assets/50e60b5c-ddcc-4357-b9cd-0b720d76e63b" />
+
+<img width="628" height="466" alt="image" src="https://github.com/user-attachments/assets/08709c02-ab6d-4b9f-861a-1578f2b68064" />
+
 
 
 => PENJELASAN
