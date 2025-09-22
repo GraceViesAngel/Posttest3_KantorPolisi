@@ -10,8 +10,7 @@
 
 ### DESKRIPSI
 
-Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan hukum, dan melindungi masyarakat; untuk menertibkan alur kerja harian. nama sistem saya yaitu, aplikasi "Sistem Kantor Polisi" ini adalah program lanjutan Post Test 1 yang memusatkan pengelolaan Informasi Polisi, Jadwal Patroli, dan Kasus Penyelidikan melalui operasi CRUD yang dilengkapi validasi input (NRP wajib 3 digit dan unik, status terkontrol: Aktif/Cuti untuk personel; Dijadwalkan/Telah Selesai untuk jadwal; Baru/Proses/Ditutup untuk kasus; serta pengecekan bahwa NRP harus terdaftar saat membuat jadwal/kasus), menyediakan pencarian personel berdasarkan nama/pangkat dan filter jadwal per area/status serta kasus per status, menampilkan data dalam tabel konsol rapi dengan judul di tengah agar mudah dibaca saat demo, menomori otomatis entitas terjadwal dan kasus (J-1, J-2… / K-1, K-2…), menyimpan data sementara secara in-memory menggunakan List sama seperti post test 1 saya tetapi dimodif, dan ditata terstruktur dalam package data_kantorpolisi (model ber-atribut private + constructor + getter/setter), operasional_kantorpolisi (logika/CRUD, validasi, dan generator ID), serta menu_kantorpolisi (UI/entry point) sekaligus memenuhi seluruh ketentuan tugas (≥3 class, ≥3 atribut, constructor, access modifier, dan pemisahan package).
-
+Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan hukum, dan melindungi masyarakat; untuk menertibkan alur kerja harian. nama sistem saya yaitu, aplikasi "Sistem Kantor Polisi" ini adalah program lanjutan Post Test 1 dan 2. Saya membuat aplikasi Sistem Kantor Polisi yang membagi fitur ke tiga modul: Informasi Kantor Polisi (dipisah lagi menjadi Polisi dan Staff Sipil), Jadwal Patroli, dan Kasus Penyelidikan. Strukturnya pakai OOP yang jelas. Ada satu kelas induk Personel, lalu dua turunan: Polisi dan StaffSipil ini memenuhi syarat inheritance (1 superclass, 2 subclass). Semua field aku kunci private dan diakses lewat getter/setter (encapsulation). Saya juga memakai override method deskripsiTugas() di masing-masing subclass supaya perilakunya beda sesuai peran; beberapa model override toString() biar output tabel rapih—bagian ini nilai tambah overriding. Kodenya dipisah ke tiga paket: data_kantorpolisi (model), operasional_kantorpolisi (logika + validasi + generator ID), dan menu_kantorpolisi (UI). Saya menambahkan fitur overriding pada hierarki kelas personel. Di data_kantorpolisi.Personel saya sediakan method deskripsiTugas() sebagai perilaku umum. Lalu di data_kantorpolisi.Polisi dan data_kantorpolisi.StaffSipil saya mengoverride method tersebut sehingga masing-masing memberikan deskripsi yang berbeda sesuai peran. Dengan begitu, ketika objek dipanggil melalui referensi bertipe Personel, hasil yang keluar tetap mengikuti jenis objek aslinya—ini menunjukkan polymorphism berjalan. Selain itu, saya juga meng-override toString() pada model seperti JadwalPatroli dan StaffSipil agar format teks yang tampil di tabel konsol rapi dan konsisten. Implementasi ini melengkapi syarat utama (enkapsulasi dan inheritance) sekaligus memenuhi bagian nilai tambah yang diminta pada Post Test 3.
 
 
 ### (MASUK PROGRAM)
@@ -29,12 +28,13 @@ Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampi
 ### MENGETIK ANGKA 1 (Informasi kantor Polisi) dan 1 (Tambah data Polisi)
 
 
-<img width="544" height="665" alt="image" src="https://github.com/user-attachments/assets/2fb9de55-b1da-4d34-a61c-a7ab32229093" />
+<img width="628" height="694" alt="image" src="https://github.com/user-attachments/assets/9dcf6b2e-2694-42a0-870b-68aa3ad4d914" />
+
 
 
 => PENJELASAN
 
-Selanjutnya pada tampilan ini saya berada di Menu Utama lalu memilih 1. Informasi Polisi, sehingga program membuka sub-menu Fitur Informasi Polisi; selanjutnya saya memilih 1. Tambah data polisi dan program meminta input berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya *Aktif/Cuti*). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: aktif; karena semua valid, data disimpan ke daftar personel dan muncul pesan "Berhasil ditambahkan." Setelah itu program kembali ke sub-menu Fitur Informasi Polisi agar saya bisa melanjutkan inputan lainnya (misalnya Lihat Data untuk melihat Yolla Karin sudah masuk di tabel, Ubah/Hapus, atau Kembali ke Menu Utama).
+Selanjutnya pada tampilan ini saya berada di Menu Utama lalu memilih 1. Informasi kantor Polisi, sehingga program membuka sub-menu Fitur Informasi Polisi; selanjutnya saya memilih 1. Tambah data polisi dan program meminta input berurutan NRP, Nama, Pangkat, dan Status sambil melakukan validasi (NRP harus 3 digit dan unik, status hanya *Aktif/Cuti*). Saya mengisi NRP: 109, Nama: Yolla Karin, Pangkat: Brimob, Status: aktif; karena semua valid, data disimpan ke daftar personel dan muncul pesan "Berhasil ditambahkan." Setelah itu program kembali ke sub-menu Fitur Informasi Polisi agar saya bisa melanjutkan inputan lainnya (misalnya Lihat Data untuk melihat Yolla Karin sudah masuk di tabel, Ubah/Hapus, atau Kembali ke Menu Utama).
 
 
 
@@ -102,12 +102,88 @@ Selanjutnya saya berada di Fitur Informasi Polisi dan memilih opsi 6 (Hapus Data
 
 ### FITUR INFORMASI POLISI (7. Kembali)
 
-<img width="544" height="411" alt="image" src="https://github.com/user-attachments/assets/8edd93c9-0234-40d0-a132-b1eefed183af" />
+<img width="613" height="385" alt="image" src="https://github.com/user-attachments/assets/90be627e-cefc-4004-8e4a-c24697c20d1d" />
+
 
 
 => PENJELASAN
 
-Selanjutnya akan masuk lagi kedalam fitur informasi polisi lagi, disini saya megetik angka 7 (Kembali) di dalam Fitur Informasi Polisi sehingga submenu ditutup tanpa mengubah data apa pun, lalu program langsung memuat ulang layar utama dengan bingkai judul KANTOR POLISI dan sapaan kembali untuk SELAMAT DATANG DI SISTEM KANTOR POLISI. Setelah itu sistem menampilkan Menu Utama yang berisi empat opsi: Informasi Polisi, Jadwal Patroli, Kasus Penyelidikan, dan Keluar dan kursor berhenti di kolom "Pilih:" menunggu input berikutnya; pada titik ini pengguna bisa melanjutkan ke menu lain dengan mengetik angka 1, 2, atau 3, atau menutup aplikasi dengan mengetik angka 4.
+Di layar Fitur Informasi Polisi saya menekan 7 (Kembali). Perintah ini menutup submenu tersebut tanpa ada perubahan data. Aplikasi kemudian naik satu level ke layar INFORMASI KANTOR POLISI, yang berisi tiga opsi: 1. POLISI, 2. STAFF SIPIL, dan 3. Kembali. Kursor berhenti di bagian “Pilih:” menunggu perintah berikutnya; dari sini saya bisa masuk lagi ke modul Polisi, beralih ke Staff Sipil, atau menekan 3 untuk kembali ke Menu Utama.
+
+
+
+
+### FITUR STAFF SIPIL (1. Tambah Staff)
+
+<img width="641" height="696" alt="image" src="https://github.com/user-attachments/assets/00f4ed85-29de-4e4a-a401-6feab45125f9" />
+
+
+=> PENJELASAN
+
+Dari layar Informasi Kantor Polisi saya memilih 2 (STAFF SIPIL), sehingga sistem membuka submenu Fitur Staff Sipil. Di submenu itu saya memilih 1 (Tambah Staff). Program lalu meminta data berurutan dan saya isi: ID Staff 204, Nama Zelsya, Bagian Keuangan, dan Status Aktif. Sistem memvalidasi bahwa ID harus 3 digit dan unik serta status hanya Aktif/Cuti; karena input saya valid, muncul konfirmasi “Berhasil ditambahkan.” Setelah penyimpanan, aplikasi menampilkan kembali layar Fitur Staff Sipil dan kursor berhenti di “Pilih:” untuk menunggu perintah berikutnya (lihat data, ubah, cari, hapus, atau kembali).
+
+
+
+### FITUR STAFF SIPIL (2. Lihat Data)
+
+<img width="620" height="639" alt="image" src="https://github.com/user-attachments/assets/13752baa-d33c-491a-98ab-6bed804a3e5f" />
+
+=> PENJELASAN
+
+Di submenu Fitur Staff Sipil saya memilih 2 (Lihat Data). Sistem lalu menampilkan tabel Daftar Staff Sipil yang berisi data aktif saat ini—termasuk entri yang baru saya tambahkan sebelumnya. Pada layar terlihat empat baris: 201 Rani Puspita (Administrasi, Aktif), 202 Gilang P (Keuangan, Aktif), 203 Sinta Lestari (Umum, Cuti), dan 204 Zelsya (Keuangan, Aktif). Setelah tabel dicetak, aplikasi kembali menampilkan menu Fitur Staff Sipil dan kursor berhenti di “Pilih:”, siap menunggu perintah berikutnya (misalnya Detail/Ubah/Cari/Hapus atau kembali).
+
+
+### FITUR STAFF SIPIL (3. Detail Ringkasan - by ID)
+<img width="609" height="597" alt="image" src="https://github.com/user-attachments/assets/49d03bbc-7cf4-4509-9bcc-0915837bb4e3" />
+
+
+=> PENJELASAN
+
+Di menu Fitur Staff Sipil saya memilih 3 (Detail Ringkasan). Sistem meminta ID Staff, lalu saya masukkan 201. Aplikasi mencari data dengan ID tersebut dan menampilkan panel ringkasan berisi ID, Nama, Bagian, dan Status (pada layar: 201 / Rani Puspita / Administrasi / Aktif). Fitur ini hanya menampilkan informasi tidak mengubah data. Jika ID tidak ditemukan atau formatnya bukan 3 digit angka, sistem akan memberi pesan kesalahan. Setelah detail dicetak, aplikasi kembali ke menu Fitur Staff Sipil dan menunggu perintah berikutnya.
+
+
+### FITUR STAFF SIPIl (4. Ubah data)
+
+<img width="623" height="544" alt="image" src="https://github.com/user-attachments/assets/1d82f8d3-4581-44f3-9d1e-c565cea469e9" />
+
+=> PENJELASAN
+
+Di menu Fitur Staff Sipil saya memilih 4 (Ubah Data). Sistem meminta ID Staff, lalu saya isi 204. Pada prompt berikutnya saya kosongkan Nama (artinya tidak diubah), lalu mengganti Bagian menjadi “Umum” dan Status menjadi “Aktif”. Aplikasi memvalidasi bahwa ID 3 digit tersebut ada dan status hanya boleh Aktif/Cuti. Karena valid, muncul konfirmasi “Diupdate.”. Setelah itu sistem kembali ke layar Fitur Staff Sipil dan menunggu perintah berikutnya. (Jika ID tidak ditemukan atau status tidak sesuai, sistem akan menolak dan menampilkan pesan error.)
+
+
+### FITUR STAFF SIPIL (5. Cari — nilai tambah)
+
+
+<img width="629" height="604" alt="image" src="https://github.com/user-attachments/assets/8256ac63-8174-4bd8-9452-8d53dfe1463a" />
+
+
+=> PENJELASAN
+
+Di submenu Fitur Staff Sipil saya memilih 5 (Cari) — ini adalah fitur pencarian (search) sehingga termasuk nilai tambahan dibanding Post Test 2 (di luar CRUD dasar). Saya mengetik kata kunci “Zelsya”. Program melakukan pencarian case-insensitive dan substring pada Nama dan Bagian, lalu menampilkan hasilnya dalam tabel Daftar Staff Sipil. Pada layar terlihat satu baris yang cocok: ID 204 / Zelsya / Umum / Aktif (sesuai data yang sebelumnya sudah saya ubah). Setelah hasil ditampilkan, aplikasi kembali ke menu Fitur Staff Sipil dan menunggu perintah berikutnya.
+
+
+
+### FITUR STAFF SIPIL (6. Hapus Data Staff → 2. Lihat Data)
+
+
+<img width="632" height="663" alt="image" src="https://github.com/user-attachments/assets/f9a92017-b938-49b8-9761-d5c49500cbd6" />
+
+=> PENJELASAN
+
+Di submenu Fitur Staff Sipil saya memilih 6 (Hapus Data Staff), lalu memasukkan ID 204. Sistem memvalidasi ID (harus 3 digit dan ada di data); karena valid, muncul konfirmasi “Dihapus.”. Setelah balik ke menu yang sama, saya pilih 2 (Lihat Data) untuk memastikan. Tabel Daftar Staff Sipil tampil hanya dengan 201 Rani Puspita, 202 Gilang P, dan 203 Sinta Lestari artinya ID 204 (Zelsya) sudah benar-benar terhapus dari daftar.
+
+
+
+### FITUR STAFF SIPIL (7. Kembali) dan INFORMASI KANTOR POLISI (3. Kembali)
+
+<img width="631" height="657" alt="image" src="https://github.com/user-attachments/assets/42fbaa55-a0f9-443f-84d0-650fc59ffa10" />
+
+
+
+
+=> PENJELASAN
+
+Selanjutnya dari Fitur Staff Sipil saya menekan 7 (Kembali) sehingga submenu staff ditutup tanpa mengubah data apa pun. Sistem membawa saya ke layar Informasi Kantor Polisi yang berisi tiga opsi (Polisi, Staff Sipil, Kembali). Di sini saya pilih 3 (Kembali) lagi untuk naik satu level. Aplikasi kemudian memuat ulang banner KANTOR POLISI dengan sapaan SELAMAT DATANG DI SISTEM KANTOR POLISI dan menampilkan Menu Utama berisi empat pilihan: Informasi Kantor Polisi, Jadwal Patroli, Kasus Penyelidikan, dan Keluar. Kursor berhenti di kolom “Pilih:” menunggu perintah berikutnya saya bisa lanjut ke modul lain dengan mengetik 1/2/3, atau keluar dari program dengan 4.
 
 
 
