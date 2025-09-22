@@ -8,22 +8,6 @@
 
 
 
-
-
-<img width="612" height="439" alt="image" src="https://github.com/user-attachments/assets/a9e546a3-c1e3-42f4-859a-f3684b1e3ec2" />
-
-
-
-
-
-<img width="626" height="436" alt="image" src="https://github.com/user-attachments/assets/aaf5a72b-44c5-4ada-96f4-fa22244b20fe" />
-
-
-
-
-# Posttest2_kantorpolisi
-
-
 ### DESKRIPSI
 
 Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan hukum, dan melindungi masyarakat; untuk menertibkan alur kerja harian. nama sistem saya yaitu, aplikasi "Sistem Kantor Polisi" ini adalah program lanjutan Post Test 1 yang memusatkan pengelolaan Informasi Polisi, Jadwal Patroli, dan Kasus Penyelidikan melalui operasi CRUD yang dilengkapi validasi input (NRP wajib 3 digit dan unik, status terkontrol: Aktif/Cuti untuk personel; Dijadwalkan/Telah Selesai untuk jadwal; Baru/Proses/Ditutup untuk kasus; serta pengecekan bahwa NRP harus terdaftar saat membuat jadwal/kasus), menyediakan pencarian personel berdasarkan nama/pangkat dan filter jadwal per area/status serta kasus per status, menampilkan data dalam tabel konsol rapi dengan judul di tengah agar mudah dibaca saat demo, menomori otomatis entitas terjadwal dan kasus (J-1, J-2… / K-1, K-2…), menyimpan data sementara secara in-memory menggunakan List sama seperti post test 1 saya tetapi dimodif, dan ditata terstruktur dalam package data_kantorpolisi (model ber-atribut private + constructor + getter/setter), operasional_kantorpolisi (logika/CRUD, validasi, dan generator ID), serta menu_kantorpolisi (UI/entry point) sekaligus memenuhi seluruh ketentuan tugas (≥3 class, ≥3 atribut, constructor, access modifier, dan pemisahan package).
@@ -33,7 +17,7 @@ Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan 
 ### (MASUK PROGRAM)
 Secara tampilan dan fungsi, output program pada Post Test 2 sama seperti Post Test 1, saat dijalankan aplikasi menampilkan menu utama (Informasi Polisi, Jadwal Patroli, Kasus Penyelidikan), tiap menu membuka sub-menu CRUD, dan data dicetak dalam tabel konsol rapi (mis. NRP | Nama | Pangkat | Status), sehingga perilaku hasil di layar tidak berubah; perbedaannya ada pada arsitektur dan kualitas internal kode dipisah per package dan program lebih terstruktur .
 
-![WhatsApp Image 2025-09-13 at 19 19 29_b5e7d7e1](https://github.com/user-attachments/assets/71a1afd0-6f99-45d7-99dc-fbf46c521fda)
+<img width="626" height="436" alt="image" src="https://github.com/user-attachments/assets/aaf5a72b-44c5-4ada-96f4-fa22244b20fe" />
 
 
 => PENJELASAN
@@ -42,7 +26,7 @@ Saat dijalankan, 'AplikasiKantorPolisi' membuat data contoh (seed), lalu menampi
 
 
 
-### MENGETIK ANGKA 1 (Informasi Polisi) dan 1 (Tambah data Polisi)
+### MENGETIK ANGKA 1 (Informasi kantor Polisi) dan 1 (Tambah data Polisi)
 
 
 <img width="544" height="665" alt="image" src="https://github.com/user-attachments/assets/2fb9de55-b1da-4d34-a61c-a7ab32229093" />
@@ -129,7 +113,8 @@ Selanjutnya akan masuk lagi kedalam fitur informasi polisi lagi, disini saya meg
 
 ### MASUK KE MENU JADWAL PATROLI
 
-<img width="618" height="486" alt="image" src="https://github.com/user-attachments/assets/b2877378-15b9-4535-97c5-4c977ddd9f6b" />
+<img width="632" height="293" alt="image" src="https://github.com/user-attachments/assets/1f86a13f-9584-4a5c-af04-c4b39c8ce599" />
+
 
 
 
@@ -209,7 +194,8 @@ Selanjutnya pilih no 6 (Kembali) pada menu Jadwal Patroli, sehingga submenu ditu
 
 ### MASUK KE MENU KASUS PENYELIDIKAN
 
-<img width="620" height="465" alt="image" src="https://github.com/user-attachments/assets/d99c4da2-6fdf-48c3-9a13-3a55c5b0d7c3" />
+<img width="626" height="284" alt="image" src="https://github.com/user-attachments/assets/c992aa39-2c50-4a2f-ba6f-858e95e63896" />
+
 
 
 => PENJELASAN
@@ -276,7 +262,8 @@ Selanjutnya saya mengetik no 5 (Kembali) pada menu Kasus Penyelidikan, sehingga 
 
 ### KELUAR DARI PROGRAM
 
-<img width="660" height="440" alt="image" src="https://github.com/user-attachments/assets/f500a6a5-5cbe-473d-a326-e64f32eb119e" />
+<img width="622" height="430" alt="image" src="https://github.com/user-attachments/assets/816cec31-2785-4707-b0b1-763ad2cb763b" />
+
 
 => PENJELASAN
 
