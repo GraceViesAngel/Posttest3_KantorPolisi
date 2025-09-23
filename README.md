@@ -27,7 +27,7 @@ Kantor polisi adalah lembaga layanan publik yang menjaga ketertiban, menegakkan 
 
 => PENJELASAN
 
-Penggunaan yang saya pakai ini adalah getter & setter untuk menerapkan enkapsulasi. getNrp() saya buat untuk membaca NRP dengan cara mengambil ID dari kelas induk (getIdInternal()), dan setNrp(nrp) untuk mengubah NRP lewat pintu yang sama (setIdInternal(nrp)) jadi identitas polisi tetap disimpan satu sumber di superclass. Lalu getPangkat()/setPangkat() dipakai membaca–menulis nilai pangkat, dan getStatus()/setStatus() untuk membaca–menulis status. Akses ke field saya batasi lewat method ini supaya data tidak diubah sembarang; alurnya, UI hanya membaca pakai getter saat menampilkan tabel, sedangkan perubahan dilakukan lewat setter di layer service setelah lulus validasi.
+Penggunaan yang saya pakai ini adalah getter & setter untuk menerapkan enkapsulasi. getNrp() saya buat untuk membaca NRP dengan cara mengambil ID dari kelas induk (getIdInternal()), dan setNrp(nrp) untuk mengubah NRP lewat pintu yang sama (setIdInternal(nrp)) jadi identitas polisi tetap disimpan satu sumber di superclass. Lalu getPangkat()/setPangkat() dipakai membaca menulis nilai pangkat, dan getStatus()/setStatus() untuk membaca–menulis status. Akses ke field saya batasi lewat method ini supaya data tidak diubah sembarang; alurnya, UI hanya membaca pakai getter saat menampilkan tabel, sedangkan perubahan dilakukan lewat setter di layer service setelah lulus validasi.
 
 
 
@@ -62,7 +62,7 @@ Program ini adalah kelas Polisi yang berperan sebagai subclass dari Personel—s
 
 => PENJELASAN
 
-Selanjutnya, ini adalah penggunaan override. Di kelas Polisi saya membuat versi khusus dari fungsi deskripsiTugas() yang berasal dari Personel, jadi saat deskripsiTugas() dipanggil pada objek polisi, yang keluar adalah kalimat khusus untuk polisi—ini menunjukkan polymorphism. Saya juga membuat versi khusus toString() agar ketika objek dicetak tampil dengan format “NRP | Nama | Pangkat | Status”, sehingga baris di tabel konsol rapi dan mudah dibaca.
+Selanjutnya, ini adalah penggunaan override. Di kelas Polisi saya membuat versi khusus dari fungsi deskripsiTugas() yang berasal dari Personel, jadi saat deskripsiTugas() dipanggil pada objek polisi, yang keluar adalah kalimat khusus untuk polisi ini menunjukkan polymorphism. Saya juga membuat versi khusus toString() agar ketika objek dicetak tampil dengan format “NRP | Nama | Pangkat | Status”, sehingga baris di tabel konsol rapi dan mudah dibaca.
 
 
 
